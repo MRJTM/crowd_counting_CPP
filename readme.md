@@ -8,9 +8,9 @@ number of people.
 ### 1.compile the C++ API of tensorflow1.8
 which will generate 2 .so files:
  - libtensorflow_cc.so
- - libtensorflow_framework.so
-to compile tensorflow you also have to have Eigen3
-we assume that you put Eigens in /home/xxx/
+ - libtensorflow_framework.so  
+ to compile tensorflow you also have to have Eigen3  
+ we assume that you put Eigens in /home/xxx/
 
 ### 2.compile OpenCV3.4 from source
 
@@ -39,7 +39,7 @@ $ ./main
 this API contains a class with two functions:
 ### 1.CrowdCounter(std::string model_path)
 this is the constructor which is to load the model,create a session and heat up the GPU
- - model_path: a String contains the absolute path of your .pb file,not a relative path
+ - model_path: a String contains the absolute path of your .pb file,not a relative path  
 ### 2.void process(Mat inputImg,Mat& heatMap,double& number, int kernel_size,int sigma,int out_enlarge_rate);
 this is the function to input a image and return the heatmap and number of people
  - inputImg: the input image with OpenCV Mat format
