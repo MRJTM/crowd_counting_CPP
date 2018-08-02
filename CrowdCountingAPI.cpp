@@ -1,7 +1,46 @@
 #include "CrowdCountingAPI.h"
+#include <fstream>
+#include <utility>
+#include <Eigen/Core>
+#include <Eigen/Dense>
+
+#include "tensorflow/cc/ops/const_op.h"
+#include "tensorflow/cc/ops/image_ops.h"
+#include "tensorflow/cc/ops/standard_ops.h"
+
+#include "tensorflow/core/framework/graph.pb.h"
+#include "tensorflow/core/framework/tensor.h"
+
+#include "tensorflow/core/graph/default_device.h"
+#include "tensorflow/core/graph/graph_def_builder.h"
+
+#include "tensorflow/core/lib/core/errors.h"
+#include "tensorflow/core/lib/core/stringpiece.h"
+#include "tensorflow/core/lib/core/threadpool.h"
+#include "tensorflow/core/lib/io/path.h"
+#include "tensorflow/core/lib/strings/stringprintf.h"
+
+#include "tensorflow/core/public/session.h"
+#include "tensorflow/core/util/command_line_flags.h"
+
+#include "tensorflow/core/platform/env.h"
+#include "tensorflow/core/platform/init_main.h"
+#include "tensorflow/core/platform/logging.h"
+#include "tensorflow/core/platform/types.h"
+
+using namespace tensorflow::ops;
+using namespace tensorflow;
+using namespace std;
+using namespace cv;
+using tensorflow::Flag;
+using tensorflow::Tensor;
+using tensorflow::Status;
+using tensorflow::string;
+using tensorflow::int32 ;
 
 CrowdCounter::CrowdCounter(std::string model_path) {
     ///*--------------------------------创建session------------------------------*///
+    Session* session;
     NewSession(SessionOptions(), &session);
 
     ///*--------------------------------从pb文件中读取模型--------------------------------*///
@@ -29,6 +68,9 @@ CrowdCounter::CrowdCounter(std::string model_path) {
     {
         session->Run({{input_tensor_name, test_tensor}}, {output_tensor_name}, {}, &outputs);
     }
+
+    //将session的地址存到temp_session中
+    temp_session=session;
 }
 
 // 定义一个函数讲OpenCV的Mat数据转化为tensor，python里面只要对cv2.read读进来的矩阵进行np.reshape之后，
@@ -73,7 +115,7 @@ void CrowdCounter::process(Mat inputImg, Mat &heatMap, double &number, int kerne
     int output_width=120;
     string input_tensor_name="input_1";
     string output_tensor_name="conv2d_5/Relu";
-
+    Session* session=(Session*)temp_session;
 
     ///*---------------------------------把图片转化为tensor-------------------------------------*///
     //创建一个tensor作为输入网络的接口
