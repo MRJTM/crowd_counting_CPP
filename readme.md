@@ -37,11 +37,10 @@ $ ./main
 
 # API Usage
 this API contains a class with two functions:
-### CrowdCounter(std::string model_path)
+### 1.CrowdCounter(std::string model_path)
 this is the constructor which is to load the model,create a session and heat up the GPU
 -model_path: a String contains the absolute path of your .pb file,not a relative path
-### void process(Mat inputImg,Mat& heatMap,double& number, int kernel_size,
-                   int sigma,int out_enlarge_rate);
+### 2.void process(Mat inputImg,Mat& heatMap,double& number, int kernel_size,int sigma,int out_enlarge_rate);
 this is the function to input a image and return the heatmap and number of people
 -inputImg: the input image with OpenCV Mat format
 -heatMap: the output heatmap with OpenCV Mat format
