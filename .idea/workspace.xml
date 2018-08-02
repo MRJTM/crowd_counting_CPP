@@ -12,8 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90f46276-0b12-43e0-8dc6-aadaaaef1567" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrowdCountingAPI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CrowdCountingAPI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrowdCountingAPI.h" beforeDir="false" afterPath="$PROJECT_DIR$/CrowdCountingAPI.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -38,14 +39,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="imgcodecs.hpp" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/include/opencv2/imgcodecs.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="172" column="17" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CrowdCountingAPI.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CrowdCountingAPI.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="116" column="46" lean-forward="true" selection-start-line="116" selection-start-column="46" selection-end-line="116" selection-end-column="46" />
+            <state relative-caret-position="1166">
+              <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="highgui.hpp" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/include/opencv2/highgui.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="389" selection-start-line="389" selection-end-line="389" />
             </state>
           </provider>
         </entry>
@@ -65,8 +84,17 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="110">
+              <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3134">
+              <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -87,9 +115,9 @@
         <option value="$PROJECT_DIR$/run_with_opencv.cpp" />
         <option value="$PROJECT_DIR$/crowd_counting.h" />
         <option value="$PROJECT_DIR$/crowd_counting.cpp" />
+        <option value="$PROJECT_DIR$/CrowdCountingAPI.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/CrowdCountingAPI.h" />
         <option value="$PROJECT_DIR$/CrowdCountingAPI.cpp" />
       </list>
     </option>
@@ -104,8 +132,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="152" />
-    <option name="y" value="44" />
+    <option name="x" value="144" />
+    <option name="y" value="43" />
     <option name="width" value="1605" />
     <option name="height" value="1020" />
   </component>
@@ -122,6 +150,11 @@
             <path>
               <item name="crowd_counting_cpp" type="b2602c69:ProjectViewProjectNode" />
               <item name="crowd_counting_cpp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crowd_counting_cpp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crowd_counting_cpp" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -175,15 +208,15 @@
       <workItem from="1532953834792" duration="696000" />
       <workItem from="1533019357494" duration="103000" />
       <workItem from="1533133818074" duration="14677000" />
-      <workItem from="1533190384842" duration="3913000" />
+      <workItem from="1533190384842" duration="9721000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24442000" />
+    <option name="totallyTimeSpent" value="30250000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="152" y="44" width="1605" height="1020" extended-state="0" />
+    <frame x="144" y="43" width="1605" height="1020" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2199377" />
@@ -401,13 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crowd_counting.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -425,16 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CrowdCountingAPI.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -445,10 +461,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3134">
+          <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/opencv2/imgcodecs.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="172" column="17" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/opencv2/highgui.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="389" selection-start-line="389" selection-end-line="389" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CrowdCountingAPI.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="116" column="46" lean-forward="true" selection-start-line="116" selection-start-column="46" selection-end-line="116" selection-end-column="46" />
+        <state relative-caret-position="1166">
+          <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>

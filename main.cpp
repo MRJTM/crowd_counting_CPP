@@ -8,10 +8,10 @@ using namespace cv;
 
 int main(int argc, char** argv )
 {
-    String image_path="../test_images/frame_01120.jpg";
-    String model_path="../hongqiao_dt5_lr1e5_bs1_ep50.pb";
+    String image_path="/home/czj/Project/crowd_counting_cpp/test_images/frame_01120.jpg";
+    String model_path="/home/czj/Project/crowd_counting_cpp/hongqiao_dt5_lr1e5_bs1_ep50.pb";
     Mat img=imread(image_path,0);
-//    imshow("test image",img);
+
 
     Mat heatmap;
     double num=0;

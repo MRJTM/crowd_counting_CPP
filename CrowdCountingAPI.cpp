@@ -140,14 +140,17 @@ void CrowdCounter::process(Mat inputImg, Mat &heatMap, double &number, int kerne
 
     ///*-----------------------------------处理输出值-----------------------------------------*///
     //获取输出的tensor的内容
+    cout<<"processing data from model output"<<endl;
     Tensor t = outputs[0];
     cv::Mat out_den(output_height, output_width, CV_32FC1, t.flat<float>().data());
 
     //积分求和计算人数
+    cout<<"counting people from deisnty map"<<endl;
     Scalar sum=cv::sum(out_den);
     number=sum(0);
 
     ///制作热力图
+    cout<<"making heatmap from density map"<<endl;
     //高斯模糊
     GaussianBlur(out_den,out_den,cv::Size(kernel_size,kernel_size),sigma,sigma);
     //处理density map
@@ -157,7 +160,7 @@ void CrowdCounter::process(Mat inputImg, Mat &heatMap, double &number, int kerne
     resize(out_den,out_den,cv::Size(120*out_enlarge_rate,75*out_enlarge_rate));
     out_den.convertTo(out_den,CV_8UC3);
     //显示非热力图效果的dentity map
-    imshow("density map",out_den);
+    //imshow("density map",out_den);
     applyColorMap(out_den,heatMap,COLORMAP_JET);
 
 }
