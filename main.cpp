@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 #include "opencv2/opencv.hpp"
-#include "crowd_counting.h"
+#include "CrowdCountingAPI.h"
 
 using namespace std;
 using namespace cv;
@@ -19,11 +19,9 @@ int main(int argc, char** argv )
     int sigma=4;
     int enlarge_rate=2;
 
-    //初始化，导入模型，创建session，GPU热身
-    Session* session=tensorflow_init(model_path);
 
-    //用这个session去跑图片
-    crowd_couting(img,heatmap,num,kernel_size,sigma,enlarge_rate,session);
+    CrowdCounter crowdCounter(model_path);
+    crowdCounter.process(img,heatmap,num,kernel_size,sigma,enlarge_rate);
 
     //显示heatmap
     imshow("heatmap",heatmap);

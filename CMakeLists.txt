@@ -11,7 +11,7 @@ include_directories(
         /home/czj/tools/tf-C/eigen3
 )
 
-add_executable(crowd_counting_cpp main.cpp crowd_counting.cpp crowd_counting.h)
+add_executable(crowd_counting_cpp main.cpp  CrowdCountingAPI.cpp CrowdCountingAPI.h)
 
 find_package(OpenCV REQUIRED)
 target_link_libraries(crowd_counting_cpp tensorflow_cc tensorflow_framework ${OpenCV_LIBS})
