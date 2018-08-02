@@ -1,19 +1,20 @@
-#Intruduction
+
+# Intruduction
 CrowdCountingAPI is to input a image with a OpenCV Mat format, 
 and return a heatmap which shows people distribution and the 
 number of people.
 
-#Installation
-###1.compile the C++ API of tensorflow1.8
+# Installation
+### 1.compile the C++ API of tensorflow1.8
 which will generate 2 .so files:
 -libtensorflow_cc.so
 -libtensorflow_framework.so
 to compile tensorflow you also have to have Eigen3
 we assume that you put Eigens in /home/xxx/
 
-###2.compile OpenCV3.4 from source
+### 2.compile OpenCV3.4 from source
 
-###3.compile this API
+### 3.compile this API
 we assume that you git clone this project into /home/xxx/
 ```sh
 $ cd /home/xxx
@@ -36,10 +37,10 @@ $ ./main
 
 # API Usage
 this API contains a class with two functions:
-###CrowdCounter(std::string model_path)
+### CrowdCounter(std::string model_path)
 this is the constructor which is to load the model,create a session and heat up the GPU
 -model_path: a String contains the absolute path of your .pb file,not a relative path
-###void process(Mat inputImg,Mat& heatMap,double& number, int kernel_size,
+### void process(Mat inputImg,Mat& heatMap,double& number, int kernel_size,
                    int sigma,int out_enlarge_rate);
 this is the function to input a image and return the heatmap and number of people
 -inputImg: the input image with OpenCV Mat format
@@ -50,4 +51,4 @@ this is the function to input a image and return the heatmap and number of peopl
 -out_enlarge_rate: the enlargement factor of the heatmap with which you can see 
 a larger heatmap
 
-###for more details of usage, you can check the main.cpp in my project
+### for more details of usage, you can check the main.cpp in my project
